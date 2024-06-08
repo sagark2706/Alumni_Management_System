@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TMSL Alumni Member Register</title>
+</head>
+<link rel="stylesheet" href="css/register.css" />
+
+<body>
+<div class="register_wrapper">
+	<div class="register_container">
+		<h2>Register Now!</h2>
+		
+		<form class="register_form" method="post">
+			<input type="text" placeholder="Full Name" name="pi_name" required>
+			<select id="select" name="pi_gender" required>
+				<option>Gender</option>
+				<option>Male</option>							
+				<option>Female</option>
+				<option>Others</option>
+				<!-- <option>thenga</option> -->
+			</select>
+			<!-- <select id="select" name="pi_userType" required>
+				<option>Alumni</option>
+				<option>Student</option>							
+			</select> -->
+
+			<input type="text" placeholder="Registration Number" name="pi_register" required>
+			<select id="select" name="pi_branch" required>
+				<option>Department</option>							
+				<option>CSE</option>
+				<option>ECE</option>
+				<option>EEE</option>
+				<option>MCA</option>
+				<option>DIPLOMA</option>
+				<option>CIVIL</option>
+				<option>IT</option>
+			</select>
+			<select id="select" name="pi_session" required>
+				<option>Year</option>							
+				<option>1999-2003</option>
+				<option>2003-2007</option>
+				<option>2007-2011</option>
+
+				<option>2010-2013</option>
+				<option>2013-2016</option>
+				<option>2016-2019</option>
+				<option>2019-2021</option>
+				<option>2021-2023</option>
+
+				<option>2009-2013</option>
+				<option>2013-2017</option>
+				<option>2017-2021</option>
+				<option>2021-2025</option>
+
+				<option>2010-2014</option>
+				<option>2014-2018</option>
+				<option>2018-2022</option>
+				<option>2022-2026</option>
+
+				<option>2011-2015</option>
+				<option>2015-2019</option>
+				<option>2019-2023</option>
+				<option>2022-2024</option>
+			</select>
+			<input type="email" placeholder="Email" name="pi_email" required>
+			<input type="text" placeholder="Mobile Number" name="pi_mobile" id="mobile" maxlength="10" pattern="[0-9]{10}"required>
+			<input type="password" placeholder="Password" name="pi_password" required>
+            <button type="submit" name="register" formaction="student_reg.php" onclick="check()" >Register</button>
+            <br><br><a href="index.php">Register Later</a>
+		</form>
+	</div>
+</body>
+<script>
+	function check(){
+	var phoneno=/^\d{10}$/;
+	var my=document.getElementById('mobile')
+	if(my.value.match(phoneno))
+	{
+		return true;
+	}
+	else
+	{
+		alert ("ENTER VALID MOBILE NUMBER");
+		return false;
+	}
+	}
+</script>
+</html>
